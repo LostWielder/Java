@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="anchor" stylesheets="@Launcher/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minigamelauncher.HelloController">
+   <children>
+      <ImageView fx:id="gamePreview" fitHeight="323.0" fitWidth="399.0" layoutX="187.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="author" fill="WHITE" layoutX="277.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Segoe Print Bold" size="16.0" />
+         </font>
+      </Text>
+      <VBox layoutX="14.0" layoutY="25.0" prefHeight="200.0" prefWidth="100.0" spacing="40.0">
+         <children>
+            <Button fx:id="playTic" mnemonicParsing="false" onAction="#startTic" onMouseEntered="#highlighted" onMouseExited="#exited" text="Tic-Tac-Toe" />
+            <Button fx:id="playSnake" mnemonicParsing="false" onAction="#startSnake" onMouseEntered="#highlighted" onMouseExited="#exited" text="Snake" />
+            <Button fx:id="playChess" mnemonicParsing="false" onAction="#startChess" onMouseEntered="#highlighted" onMouseExited="#exited" text="Chess" />
+            <Button fx:id="playCheck" mnemonicParsing="false" onAction="#startCheck" onMouseEntered="#highlighted" onMouseExited="#exited" text="Checkers" />
+            <Button fx:id="playMatch" mnemonicParsing="false" onAction="#startMatch" onMouseEntered="#highlighted" onMouseExited="#exited" text="IntelliMatch" />
+            <Button fx:id="playDice" mnemonicParsing="false" onAction="#startDice" onMouseEntered="#highlighted" onMouseExited="#exited" text="IntelliDice" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
