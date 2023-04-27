@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onKeyPressed="#returnToMenu" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minigamelauncher.intellimatch.MatchMenuController">
+   <children>
+      <Group layoutX="60.0" layoutY="38.0">
+         <children>
+            <ImageView fx:id="levelSelectBorder" fitHeight="297.0" fitWidth="216.0" layoutX="324.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@MenuIcons/Border.png" />
+               </image>
+            </ImageView>
+            <VBox fx:id="levelSelect" layoutX="360.0" layoutY="76.0" prefHeight="270.0" prefWidth="178.0" visible="false">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="easy" mnemonicParsing="false" onAction="#easyPlay" text="Easy" />
+                        <ImageView fx:id="easyStage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@EasyModeIcons/grass.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="stan" mnemonicParsing="false" onAction="#standardPlay" text="Standard" />
+                        <ImageView fx:id="stanStage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@StandardModeIcons/castle.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#hardPlay" text="Hard" />
+                        <ImageView fx:id="hardStage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@HardModeIcons/desert.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fx:id="levelSelectText" fitHeight="150.0" fitWidth="200.0" layoutX="332.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@MenuIcons/levelSelect.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <ImageView fitHeight="47.0" fitWidth="297.0" layoutX="4.0" layoutY="52.0" onKeyPressed="#returnToMenu" pickOnBounds="true" rotate="-21.0" smooth="false">
+         <image>
+            <Image url="@MenuIcons/text.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playButton" fitHeight="137.0" fitWidth="231.0" layoutX="69.0" layoutY="180.0" onKeyPressed="#returnToMenu" onMouseClicked="#easyPlay" onMouseEntered="#highlighted" onMouseExited="#exited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@MenuIcons/Play.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="jukeBox" layoutX="417.0" layoutY="29.0" onAction="#playSongs" prefWidth="150.0" promptText="Jukebox" visible="false" />
+   </children>
+</AnchorPane>
